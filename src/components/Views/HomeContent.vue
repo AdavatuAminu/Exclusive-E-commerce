@@ -27,68 +27,75 @@ export default {
 }
 </script>
 <template>
-  <div class="flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 px-4 lg:px-0">
-    <div class="flex flex-col space-y-4 text-lg mt-10">
-      <div class="flex items-center gap-4 hover:text-[#DB4444] transition cursor-pointer">
+   <!-- Categories & Banner -->
+  <div class="flex flex-col lg:flex-row justify-center gap-6 lg:gap-20 px-2 lg:px-0 mt-0">
+    <!-- Categories -->
+    <div class="flex flex-col space-y-3 text-base sm:text-lg">
+      <div class="flex items-center gap-2 hover:text-[#DB4444] transition cursor-pointer mt-5">
         <a>Woman’s Fashion</a>
         <img src="/assets/Vector (3).png" class="w-2 h-3" />
       </div>
-      <div class="flex items-center gap-4 hover:text-[#DB4444] transition cursor-pointer">
+      <div class="flex items-center gap-2 hover:text-[#DB4444] transition cursor-pointer">
         <a>Men’s Fashion</a>
         <img src="/assets/Vector (3).png" class="w-2 h-3" />
       </div>
-      <a class="hover:text-[#DB4444] transition">Electronics</a>
-      <a class="hover:text-[#DB4444] transition">Home & Lifestyle</a>
-      <a class="hover:text-[#DB4444] transition">Medicine</a>
-      <a class="hover:text-[#DB4444] transition">Sports & Outdoor</a>
-      <a class="hover:text-[#DB4444] transition">Baby’s & Toys</a>
-      <a class="hover:text-[#DB4444] transition">Groceries & Pets</a>
-      <a class="hover:text-[#DB4444] transition">Health & Beauty</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Electronics</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Home & Lifestyle</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Medicine</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Sports & Outdoor</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Baby’s & Toys</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Groceries & Pets</a>
+      <a class="hidden lg:block hover:text-[#DB4444] transition">Health & Beauty</a>
     </div>
-    <div class="w-px h-[384px] bg-gray-300 top-30"></div>
-    <div class="mt-10">
-      <img src="/assets/Frame 560.png" class="w-full max-w-[892px] h-auto rounded-lg shadow-lg" alt="Banner" />
+    <!-- Divider -->
+    <div class="hidden lg:block w-px h-[384px] bg-gray-300"></div>
+
+    <!-- Banner -->
+    <div class="mt-0 lg:mt-10 w-full lg:w-auto">
+      <img src="/assets/Frame 560.png" class="w-full max-w-[892px] h-auto rounded-lg shadow-lg mx-auto" alt="Banner" />
     </div>
   </div>
 
   <!-- Flash Sales Section -->
-  <div class="max-w-7xl mx-auto px-4 mt-20">
-    <div class="flex items-center gap-4">
-      <div class="w-5 h-10 bg-[#DB4444] rounded"></div>
-      <span class="text-[#DB4444] font-semibold text-lg">Today's</span>
+  <div class="max-w-7xl mx-auto px-4 mt-16">
+    <div class="flex items-center gap-2">
+      <div class="w-4 h-8 bg-[#DB4444] rounded"></div>
+      <span class="text-[#DB4444] font-semibold text-base sm:text-lg">Today's</span>
     </div>
-    <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-8">
-      <div class="flex items-center gap-16">
-        <h1 class="text-4xl font-bold">Flash Sales</h1>
 
-        <div class="flex items-center gap-4 text-center">
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-6">
+      <!-- Timer -->
+      <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4">
+        <h1 class="text-2xl sm:text-4xl font-bold">Flash Sales</h1>
+        <div class="flex items-center gap-2 text-center">
           <div>
             <span class="text-xs text-gray-600 block">Days</span>
-            <p class="text-3xl font-bold">{{ String(timeLeft.days).padStart(2, '0') }}</p>
+            <p class="text-2xl sm:text-3xl font-bold">{{ String(timeLeft.days).padStart(2,'0') }}</p>
           </div>
-          <span class="text-[#DB4444] text-3xl font-bold">:</span>
+          <span class="text-[#DB4444] text-2xl sm:text-3xl font-bold">:</span>
           <div>
             <span class="text-xs text-gray-600 block">Hours</span>
-            <p class="text-3xl font-bold">{{ String(timeLeft.hours).padStart(2, '0') }}</p>
+            <p class="text-2xl sm:text-3xl font-bold">{{ String(timeLeft.hours).padStart(2,'0') }}</p>
           </div>
-          <span class="text-[#DB4444] text-3xl font-bold">:</span>
+          <span class="text-[#DB4444] text-2xl sm:text-3xl font-bold">:</span>
           <div>
             <span class="text-xs text-gray-600 block">Minutes</span>
-            <p class="text-3xl font-bold">{{ String(timeLeft.minutes).padStart(2, '0') }}</p>
+            <p class="text-2xl sm:text-3xl font-bold">{{ String(timeLeft.minutes).padStart(2,'0') }}</p>
           </div>
-          <span class="text-[#DB4444] text-3xl font-bold">:</span>
+          <span class="text-[#DB4444] text-2xl sm:text-3xl font-bold">:</span>
           <div>
             <span class="text-xs text-gray-600 block">Seconds</span>
-            <p class="text-3xl font-bold">{{ String(timeLeft.seconds).padStart(2, '0') }}</p>
+            <p class="text-2xl sm:text-3xl font-bold">{{ String(timeLeft.seconds).padStart(2,'0') }}</p>
           </div>
         </div>
       </div>
-      <div class="flex gap-3">
-        <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-          <img src="/assets/icons_arrow-left.png" class="w-6 h-6" />
+      <!-- Navigation buttons -->
+      <div class="flex gap-2 mt-4 lg:mt-0">
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons_arrow-left.png" class="w-5 sm:w-6 h-5 sm:h-6" />
         </button>
-        <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-          <img src="/assets/icons arrow-right.png" class="w-6 h-6" />
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons arrow-right.png" class="w-5 sm:w-6 h-5 sm:h-6" />
         </button>
       </div>
     </div>
@@ -138,8 +145,9 @@ export default {
       </div>
     </div>
 
-    <div class="flex justify-center mt-16">
-      <button class="bg-[#DB4444] text-white px-12 py-4 rounded hover:bg-red-600 transition text-lg font-medium">
+    <!-- View All Products -->
+    <div class="flex justify-center mt-8">
+      <button class="bg-[#DB4444] text-white px-8 sm:px-12 py-3 sm:py-4 rounded hover:bg-red-600 transition text-base sm:text-lg font-medium">
         View All Products
       </button>
     </div>
@@ -148,56 +156,52 @@ export default {
   <div class="flex items-center justify-between max-w-7xl mx-auto px-4 mt-20">
     <div>
       <div class="flex items-center gap-4">
-        <div class="w-5 h-10 bg-[#DB4444] rounded"></div>
-        <span class="text-[#DB4444] font-semibold text-lg">Categories</span>
+        <div class="w-4 h-8 bg-[#DB4444] rounded"></div>
+      <span class="text-[#DB4444] font-semibold text-base sm:text-lg">Categories</span>
       </div>
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-8">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
         <div class="flex items-center gap-16">
-          <h1 class="text-4xl font-bold">Browse By Category</h1>
+          <h1 class="text-2xl lg:text-4xl lg:mt-5 font-bold">Browse By Category</h1>
         </div>
       </div>
     </div>
-    <div class="flex gap-3">
-      <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-        <img src="/assets/icons_arrow-left.png" class="w-6 h-6" />
-      </button>
-      <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-        <img src="/assets/icons arrow-right.png" class="w-6 h-6" />
-      </button>
-    </div>
+    <!-- Navigation buttons -->
+      <div class="flex gap-2 mt-8 lg:mt-3">
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons_arrow-left.png" class="w-5 sm:w-6 h-5 sm:h-6" />
+        </button>
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons arrow-right.png" class="w-5 sm:w-6 h-5 sm:h-6" />
+        </button>
+      </div>
   </div>
-  <div class="flex items-center gap-4 justify-between px-10 py-10">
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-CellPhone.png" class="w-15 h-15" />
-      <span>Phones</span>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-Computer.png" class="w-15 h-15" />
-      <span>Computers</span>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-SmartWatch.png" class="w-15 h-15" />
-      <span>SmartWatch</span>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-Camera.png" class="w-15 h-15" />
-      <span>Camera</span>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-Headphone.png" class="w-15 h-15" />
-      <span>HeadPhones</span>
-    </div>
-    <div
-      class="flex flex-col items-center justify-center w-[170px] h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
-      <img src="/assets/Category-Gamepad.png" class="w-15 h-15" />
-      <span>Gaming</span>
-    </div>
+  <!-- Categories -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 px-4 py-5 sm:py-10 justify-items-center">
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-CellPhone.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">Phones</span>
   </div>
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-Computer.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">Computers</span>
+  </div>
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-SmartWatch.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">SmartWatch</span>
+  </div>
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-Camera.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">Camera</span>
+  </div>
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-Headphone.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">HeadPhones</span>
+  </div>
+  <div class="flex flex-col items-center justify-center w-full h-[120px] sm:h-[145px] rounded-sm border border-gray-500 hover:bg-[#DB4444] cursor-pointer">
+    <img src="/assets/Category-Gamepad.png" class="w-8 h-8 sm:w-12 sm:h-12" />
+    <span class="text-sm sm:text-base mt-1 text-center">Gaming</span>
+  </div>
+</div>
   <div class="max-w-7xl mx-auto">
     <div class="border-t border-gray-400 w-full"></div>
   </div>
@@ -205,12 +209,12 @@ export default {
   <div class="flex items-center justify-between max-w-7xl mx-auto px-4 mt-20">
     <div>
       <div class="flex items-center gap-4">
-        <div class="w-5 h-10 bg-[#DB4444] rounded"></div>
-        <span class="text-[#DB4444] font-semibold text-lg">This Month</span>
+        <div class="w-4 h-8 bg-[#DB4444] rounded"></div>
+      <span class="text-[#DB4444] font-semibold text-base sm:text-lg">This Month</span>
       </div>
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-8">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-2 gap-8">
         <div class="flex items-center gap-16">
-          <h1 class="text-4xl font-bold">Best selling Products</h1>
+          <h1 class="text-2xl lg:text-4xl lg:mt-5 font-bold">Best selling Products</h1>
         </div>
       </div>
     </div>
@@ -257,64 +261,60 @@ export default {
         </div>
       </div>
     </div>
-    <div class="flex justify-between p-10 items-center w-[1170px] h-[500px] bg-black ml-10 py-10 mt-20">
-      <div class="flex flex-col">
-        <span class="text-[#00FF66] text-sm">Categories</span>
-        <span class="text-[48px] text-white font-bold">Enhance Your<br> Music Experience</span>
-        <div>
-          <div class="pb-5">
-            <div class="flex items-center gap-4 text-center">
-              <div class="rounded-full w-[62px] h-[62px] bg-white items-center justify-center">
-                <p class="text-2xl font-bold">{{ String(timeLeft.hours).padStart(2, '0') }}</p>
-                <span class="text-xs text-gray-600 block">Hours</span>
-              </div>
-              <div class="rounded-full w-[62px] h-[62px] bg-white items-center justify-center">
-                <p class="text-2xl font-bold">{{ String(timeLeft.days).padStart(2, '0') }}</p>
-                <span class="text-xs text-gray-600 block">Days</span>
-              </div>
-              <div class="rounded-full w-[62px] h-[62px] bg-white items-center justify-center">
-                <p class="text-2xl font-bold">{{ String(timeLeft.minutes).padStart(2, '0') }}</p>
-                <span class="text-xs text-gray-600 block">Minutes</span>
-              </div>
-              <div class="rounded-full w-[62px] h-[62px] bg-white items-center justify-center">
-                <p class="text-2xl font-bold">{{ String(timeLeft.seconds).padStart(2, '0') }}</p>
-                <span class="text-xs text-gray-600 block">Seconds</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="bg-[#00FF66] text-white text-sm w-[171px] h-[56px] rounded-sm hover:bg-[#DB4444] cursor-pointer">Buy
-          Now!</button>
+    <div class="flex flex-col lg:flex-row justify-between items-center w-full max-w-[1170px] mx-auto lg:ml-10 h-auto lg:h-[500px] bg-black p-4 sm:p-10 mt-10 sm:mt-20 gap-4 lg:gap-0">
+  <div class="flex flex-col items-center lg:items-start gap-2 text-center lg:text-left">
+    <span class="text-[#00FF66] text-xs sm:text-sm">Categories</span>
+    <span class="text-2xl sm:text-[48px] text-white font-bold leading-tight">Enhance Your<br class="hidden lg:block"> Music Experience</span>
+    <div class="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-4 mt-4">
+      <div class="rounded-full w-12 h-12 sm:w-[62px] sm:h-[62px] bg-white items-center justify-center flex flex-col">
+        <p class="text-sm sm:text-2xl font-bold">{{ String(timeLeft.hours).padStart(2, '0') }}</p>
+        <span class="text-[10px] text-gray-600">Hours</span>
       </div>
-      <div class="relative w-fit">
-        <img src="/assets/Ellipse 23.png" class="w-[568px] h-[500px] absolute top-[-80px] left-0 z-0" />
-
-        <img src="/assets/Frame 694.png" class="w-[568px] h-[330px] relative z-10" />
+      <div class="rounded-full w-12 h-12 sm:w-[62px] sm:h-[62px] bg-white items-center justify-center flex flex-col">
+        <p class="text-sm sm:text-2xl font-bold">{{ String(timeLeft.days).padStart(2, '0') }}</p>
+        <span class="text-[10px] text-gray-600">Days</span>
       </div>
-
+      <div class="rounded-full w-12 h-12 sm:w-[62px] sm:h-[62px] bg-white items-center justify-center flex flex-col">
+        <p class="text-sm sm:text-2xl font-bold">{{ String(timeLeft.minutes).padStart(2, '0') }}</p>
+        <span class="text-[10px] text-gray-600">Minutes</span>
+      </div>
+      <div class="rounded-full w-12 h-12 sm:w-[62px] sm:h-[62px] bg-white items-center justify-center flex flex-col">
+        <p class="text-sm sm:text-2xl font-bold">{{ String(timeLeft.seconds).padStart(2, '0') }}</p>
+        <span class="text-[10px] text-gray-600">Seconds</span>
+      </div>
     </div>
+    <button class="bg-[#00FF66] text-white text-xs sm:text-sm w-full sm:w-[171px] h-[40px] sm:h-[56px] rounded-sm hover:bg-[#DB4444] cursor-pointer mt-4">
+      Buy Now!
+    </button>
+  </div>
+  <div class="relative w-full lg:w-fit flex justify-center lg:items-center h-auto lg:h-[500px]">
+    <img src="/assets/Ellipse 23.png" class="w-full max-w-[568px] h-auto lg:h-[500px] absolute top-[-40px] lg:top-[-80px] left-0 z-0" />
+    <img src="/assets/Frame 694.png" class="w-full max-w-[568px] h-auto lg:h-[330px] relative z-10" />
+  </div>
+</div>
   </div>
   <!-- Our Products Section -->
   <div class="max-w-7xl mx-auto px-4 mt-20">
     <div class="flex items-center justify-between max-w-7xl mx-auto px-4 mt-20">
-      <div>
-        <div class="flex items-center gap-4">
-          <div class="w-5 h-10 bg-[#DB4444] rounded"></div>
-          <span class="text-[#DB4444] font-semibold text-lg">Our Products</span>
-        </div>
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-8">
-          <div class="flex items-center gap-16">
-            <h1 class="text-4xl font-bold">Explore Our Products</h1>
-          </div>
+        <!-- Categories Grid -->
+    <div>
+      <div class="flex items-center gap-4">
+        <div class="w-4 h-8 bg-[#DB4444] rounded"></div>
+      <span class="text-[#DB4444] font-semibold text-base sm:text-lg">Our Products</span>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="flex items-center gap-16">
+          <h1 class="text-2xl lg:text-4xl lg:mt-5 font-bold">Explore Our Products</h1>
         </div>
       </div>
-      <div class="flex gap-3">
-        <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-          <img src="/assets/icons_arrow-left.png" class="w-6 h-6" />
+    </div>
+    <!-- Navigation buttons -->
+      <div class="flex gap-2 mt-8 lg:mt-3">
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons_arrow-left.png" class="w-5 sm:w-6 h-5 sm:h-6" />
         </button>
-        <button class="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
-          <img src="/assets/icons arrow-right.png" class="w-6 h-6" />
+        <button class="p-2 sm:p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <img src="/assets/icons arrow-right.png" class="w-5 sm:w-6 h-5 sm:h-6" />
         </button>
       </div>
     </div>
@@ -426,26 +426,27 @@ export default {
         </div>
       </div>
     </div>
-    <div class="flex justify-center mt-16">
-      <button class="bg-[#DB4444] text-white px-12 py-4 rounded hover:bg-red-600 transition text-lg font-medium">
+   <!-- View All Products -->
+    <div class="flex justify-center mt-8">
+      <button class="bg-[#DB4444] text-white px-8 sm:px-12 py-3 sm:py-4 rounded hover:bg-red-600 transition text-base sm:text-lg font-medium">
         View All Products
       </button>
     </div>
     <!-- Our Products Section -->
     <div class="flex items-center justify-between max-w-7xl mx-auto px-4 mt-20">
       <div>
-        <div class="flex items-center gap-4">
-          <div class="w-5 h-10 bg-[#DB4444] rounded"></div>
-          <span class="text-[#DB4444] font-semibold text-lg">Featured</span>
-        </div>
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between mt-6 gap-8">
-          <div class="flex items-center gap-16">
-            <h1 class="text-4xl font-bold">New Arrival</h1>
-          </div>
+      <div class="flex items-center gap-4">
+        <div class="w-4 h-8 bg-[#DB4444] rounded"></div>
+      <span class="text-[#DB4444] font-semibold text-base sm:text-lg">Featured</span>
+      </div>
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="flex items-center gap-16">
+          <h1 class="text-2xl lg:text-4xl lg:mt-5 font-bold">New Arrival</h1>
         </div>
       </div>
     </div>
-    <div class="flex flex-col items-center mt-10 ml-5 gap-15">
+    </div>
+    <div class="mt-0 lg:mt-10 w-full lg:w-auto flex flex-col gap-5 mt-5 items-center">
       <img src="/assets/Frame 739.png" />
       <img src="/assets/Frame 702.png" class="w-[943px]" />
     </div>

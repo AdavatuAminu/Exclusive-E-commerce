@@ -31,49 +31,77 @@ export default {
 };
 </script>
 <template>
-    <Header />
-    <div class="flex space-x-20">
-        <div>
-            <img src="/assets/dl.beatsnoop 1.png" class="w-[805px] h-[701px] pt-10 pb-10"></img>
-        </div>
-        <div class="p-9 bg-white w-[490px] h-[410px] mt-20">
-            <h1 class="text-[36px] text-black">Log in to Exclusive</h1>
-            <h1 class="text-[16px] text-black">Enter your details below</h1>
-            <div class="mt-5">
-                <h2 class="text-[#6A7E8A] text-[12px]">Email</h2>
-                <div class="flex space-x-2">
-                    <input v-model="Email" placeholder="Email or Phone Number" type="email"
-                        class="text-[#013C61] text-[16px] mt-3 block w-[420px] border-none focus:outline-none" />
-                    <img src="" class="w-[11px] h-[12px] mt-4" />
-                </div>
-                <div class="border-b-2 w-[370px] text-[#000000]/50 mt-1"></div>
-            </div>
+  <Header />
 
-            <div class="mt-5">
-                <h2 class="text-[#6A7E8A] text-[12px]">Password</h2>
-                <div class="flex space-x-2">
-                    <input v-model="Password" placeholder="Enter your password..." type="password"
-                        class="text-[#013C61] text-[16px] mt-3 block w-[420px] border-none focus:outline-none" />
-                    <img src="" class="w-[13px] h-[10px] mt-4" />
-                </div>
-                <div class="border-b-2 w-[370px] text-[#000000]/50 mt-1"></div>
-            </div>
+  <!-- Wrapper -->
+  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-10 px-4 py-10">
 
-            <div class="flex justify-center items-center mt-10 space-x-10">
-                <router-link to="/homepage">
-                    <button @click="handleContinue"
-                    class="bg-[#DB4444] text-white h-[56px] w-[143px] rounded-sm text-[18px] font-normal">
-                    Log in
-                </button>
-                </router-link>
-                
-                <router-link to=""
-                class="text-[#DB4444] text-[16px]">
-                Forget Password?
-                </router-link>
-                
-            </div>
-        </div>
+    <!-- Image (hidden on mobile) -->
+    <div class="hidden lg:block">
+      <img
+        src="/assets/dl.beatsnoop 1.png"
+        class="max-w-[800px] w-full h-auto"
+        alt="Login visual"
+      />
     </div>
-    <Footer />
+
+    <!-- Login Card -->
+    <div class="w-full max-w-md p-6 sm:p-8">
+
+      <h1 class="text-2xl sm:text-3xl font-semibold text-black">
+        Log in to Exclusive
+      </h1>
+
+      <p class="text-sm text-black mt-1">
+        Enter your details below
+      </p>
+
+      <!-- Email -->
+      <div class="mt-6">
+        <label class="text-[#6A7E8A] text-xs">Email</label>
+        <input
+          v-model="Email"
+          placeholder="Email or Phone Number"
+          type="email"
+          class="mt-2 w-full border-b border-black/50 text-base text-[#013C61] focus:outline-none py-2"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mt-6">
+        <label class="text-[#6A7E8A] text-xs">Password</label>
+        <input
+          v-model="Password"
+          placeholder="Enter your password..."
+          type="password"
+          class="mt-2 w-full border-b border-black/50 text-base text-[#013C61] focus:outline-none py-2"
+        />
+      </div>
+
+      <!-- Actions -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-10">
+
+        <router-link to="/homepage">
+          <button
+            @click="handleContinue"
+            class="bg-[#DB4444] text-white h-12 px-10 rounded-sm text-base w-full sm:w-auto"
+          >
+            Log in
+          </button>
+        </router-link>
+
+        <router-link
+          to=""
+          class="text-[#DB4444] text-sm text-center sm:text-left"
+        >
+          Forget Password?
+        </router-link>
+
+      </div>
+
+    </div>
+  </div>
+
+  <Footer />
 </template>
+
