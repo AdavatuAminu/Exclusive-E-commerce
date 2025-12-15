@@ -6,8 +6,8 @@ export default {
     components: { Header, Footer },
     data() {
         return {
-            Email: "aliyuaminu3369@gmail.com",
-            Password: "abcd1234",
+            Email: "",
+            Password: "",
         };
     },
     methods: {

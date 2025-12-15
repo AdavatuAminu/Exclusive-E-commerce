@@ -6,9 +6,9 @@ export default {
     components: { Header, Footer },
     data() {
         return {
-            Name: "Aliyu Aminu Adavatu",
-            Email: "aliyuaminu3369@gmail.com",
-            Password: "abcd1234",
+            Name: "",
+            Email: "",
+            Password: "",
         };
     },
     methods: {

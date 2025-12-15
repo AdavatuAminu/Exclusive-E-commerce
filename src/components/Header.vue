@@ -79,7 +79,7 @@ export default {
 
   <!-- Main header -->
   <header class="bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+    <div class="max-w-7xl gap-2 mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
 
       <!-- Logo -->
       <h1 class="text-sm sm:text-3xl font-bold text-black">Exclusive</h1>
